@@ -1,0 +1,65 @@
+{
+  "fixture_kind": "synthetic",
+  "organization": {
+    "id": "ORG-DEMO-001",
+    "name": "Example Manufacturing Cooperative",
+    "domain": "customer.example.com"
+  },
+  "cases": [
+    {
+      "id": "CASE-DEMO-001",
+      "title": "Scheduled inventory refresh finishes later than expected",
+      "status": "investigating",
+      "product_tags": ["asset-inventory"],
+      "references": ["ISSUE-DEMO-009"],
+      "timeline": [
+        {
+          "id": "E-001",
+          "kind": "customer_message",
+          "timestamp": "2026-01-13T14:00:00Z",
+          "author": "Alex Example",
+          "body": "The demonstration inventory refresh completed after the expected window."
+        },
+        {
+          "id": "E-002",
+          "kind": "support_note",
+          "timestamp": "2026-01-13T15:30:00Z",
+          "author": "Sam Example",
+          "body": "Synthetic logs show a queued worker waiting for capacity."
+        }
+      ]
+    },
+    {
+      "id": "CASE-DEMO-002",
+      "title": "Delayed scheduled inventory processing",
+      "status": "monitoring",
+      "product_tags": ["asset-inventory"],
+      "references": ["ISSUE-DEMO-009"],
+      "timeline": [
+        {
+          "id": "E-101",
+          "kind": "customer_message",
+          "timestamp": "2026-01-14T09:00:00Z",
+          "author": "Jordan Example",
+          "body": "The fictional test tenant observed the same demonstration delay."
+        }
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "ISSUE-DEMO-009",
+      "title": "Worker capacity can delay inventory refresh jobs",
+      "status": "in_progress",
+      "project": "DEMO",
+      "comments": [
+        {
+          "id": "COMMENT-DEMO-001",
+          "author": "Taylor Example",
+          "timestamp": "2026-01-14T12:00:00Z",
+          "body": "A synthetic reproduction confirms queue pressure in the demo worker pool."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+[routing]
+case-summary = "local-evidence"
+
+[network]
+allowed_hosts = []

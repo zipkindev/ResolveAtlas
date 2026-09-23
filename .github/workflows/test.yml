@@ -1,0 +1,40 @@
+name: test
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Compile
+        run: python -m compileall -q src tests scripts
+      - name: Install quality tools
+        run: python -m pip install '.[test]'
+      - name: Formatting and lint
+        run: |
+          ruff format --check src tests scripts
+          ruff check src tests scripts
+      - name: Static security analysis
+        run: bandit -q -r src
+      - name: Unit and contract tests
+        run: PYTHONPATH=src python -m unittest discover -s tests -v
+      - name: Public-tree safety audit
+        run: python scripts/audit_public_tree.py .
+      - name: Offline smoke test
+        run: >-
+          PYTHONPATH=src python -m resolveatlas.cli
+          --fixture tests/fixtures/synthetic/support_records.json
+          analyze-case CASE-DEMO-001
