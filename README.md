@@ -9,14 +9,30 @@ human-reviewed outcomes rather than opaque automation.
 
 ## Project status
 
-ResolveAtlas is in pre-publication extraction. This repository is a new,
-history-clean implementation workspace and is not yet approved for publication
-or production use.
+ResolveAtlas is a production-informed, clean-room reimplementation of an
+evidence-first support intelligence system. The predecessor workflows were
+operated successfully in a production environment; this repository contains an
+independently authored, history-clean rebuild with clearer security and
+integration boundaries.
+
+The implemented vertical slice is functional and covered by unit and contract
+tests. ResolveAtlas is currently an alpha: the rearchitected system as a whole
+has not completed production qualification, and integrations added during the
+rebuild require validation in their intended deployment environments.
 
 ResolveAtlas is licensed under Apache-2.0. The project owner has attested that
 the clean-room implementation was created on personal time and equipment and is
-authorized for release. Publication remains gated on confirming that the exact
-candidate contains no former-employer or customer material.
+authorized for release. Publication checks remain focused on ensuring that the
+exact candidate contains no former-employer or customer material.
+
+## Security automation highlights
+
+- Exact-host outbound policy to constrain connector and provider traffic.
+- Explicit AI task routing with no implicit provider fallback.
+- Deterministic evidence fingerprints for freshness and substitution checks.
+- Bounded attachment and connector inputs that fail closed.
+- Evidence identifiers preserved through analysis for reviewable citations.
+- Read-only external connectors and no source-system mutation in the alpha core.
 
 ## Planned v1
 
@@ -44,8 +60,8 @@ boundaries are proven generic.
 
 ## Repository map
 
-The initial structure is documented in [Architecture](docs/ARCHITECTURE.md).
-Publication gates and extraction status are tracked in
+The current structure is documented in [Architecture](docs/ARCHITECTURE.md).
+Publication safeguards and extraction provenance are tracked in
 [Publication gates](docs/PUBLICATION_GATES.md) and
 [Extraction ledger](docs/EXTRACTION_LEDGER.md). See
 [Provider configuration](docs/PROVIDER_CONFIGURATION.md), the

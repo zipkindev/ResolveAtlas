@@ -1,8 +1,7 @@
 # Governance
 
-ResolveAtlas is currently maintained by its founding owner during extraction and
-pre-publication review. No public governance rights or maintainer roles are yet
-granted.
+ResolveAtlas is maintained by its founding owner during public-alpha validation.
+No additional governance rights or maintainer roles are currently granted.
 
 Before accepting contributions, the project will document:
 

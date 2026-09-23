@@ -8,7 +8,8 @@ candidate commit and archive.
 - The project owner attested on 2026-09-23 that the clean implementation was
   authored on personal time and equipment and may be released under Apache-2.0.
 - No contributor-owned or third-party copied implementation is present.
-- Name and trademark clearance is complete.
+- A preliminary name and trademark search is recorded; the owner must accept
+  the result or obtain any desired professional review before reservation.
 
 ## Content
 

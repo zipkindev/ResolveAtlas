@@ -1,6 +1,6 @@
 # Threat model
 
-This model covers the implemented pre-publication core and identifies controls
+This model covers the implemented alpha core and identifies controls
 required before higher-risk features are added.
 
 ## Protected assets

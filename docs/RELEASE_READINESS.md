@@ -5,9 +5,11 @@ Reviewed: 2026-09-23
 ## Decision
 
 The clean ResolveAtlas tree has one reviewed root commit and passes fresh-clone
-verification. It is not yet ready for public release because independent review,
-remote security configuration, namespace reservation, and final release-artifact
-gates require external state.
+verification. The implemented vertical slice is suitable for an alpha candidate,
+but the rebuild has not completed production qualification. Making the repository
+public still requires independent review, remote security configuration,
+namespace reservation, and final release-artifact checks that depend on external
+state.
 
 ## Completed evidence
 

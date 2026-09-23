@@ -2,14 +2,16 @@
 
 ## Supported versions
 
-ResolveAtlas has not published a supported release. Security support begins with
-the first approved public version.
+ResolveAtlas is currently an alpha and has no production-supported release.
+Security reports about the latest alpha are still welcome and will be reviewed
+on a best-effort basis.
 
 ## Reporting a vulnerability
 
 Do not disclose suspected vulnerabilities, credentials, customer data, or
-exploitation details in a public issue. A private reporting address and GitHub
-private vulnerability-reporting workflow will be configured before publication.
+exploitation details in a public issue. A private reporting address or GitHub
+private vulnerability-reporting workflow must be configured when the repository
+becomes public.
 
 Until then, report findings directly to the repository owner through an already
 trusted private channel. Include affected version or commit, reproduction steps,
