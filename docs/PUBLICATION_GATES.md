@@ -1,7 +1,7 @@
 # Publication gates
 
-ResolveAtlas must remain private and local until all gates pass for the exact
-candidate commit and archive.
+ResolveAtlas is available as a public alpha. No stable package or release may be
+published until all gates pass for the exact candidate commit and archive.
 
 ## Authority
 
