@@ -4,12 +4,10 @@ Reviewed: 2026-09-23
 
 ## Decision
 
-The clean ResolveAtlas tree has one reviewed root commit and passes fresh-clone
-verification. The implemented vertical slice is suitable for an alpha candidate,
-but the rebuild has not completed production qualification. Making the repository
-public still requires independent review, remote security configuration,
-namespace reservation, and final release-artifact checks that depend on external
-state.
+The clean ResolveAtlas history and implemented vertical slice are now available
+as a public alpha. The rebuild has not completed production qualification, and
+no stable package or release has been published. Independent review, namespace
+reservation, branch rules, and final release-artifact checks remain outstanding.
 
 ## Completed evidence
 
@@ -28,6 +26,9 @@ state.
   after toolchain update. Runtime licenses are Apache-2.0, MIT, or BSD compatible.
 - A valid CycloneDX 1.6 environment SBOM was generated. The final release SBOM
   must be regenerated from the exact release environment.
+- The GitHub repository is public. Secret scanning, push protection, Dependabot
+  alerts and security updates, automated security fixes, private vulnerability
+  reporting, dependency review, and CodeQL are enabled and passing.
 
 ## Name and namespace review
 
@@ -54,14 +55,11 @@ any time.
    record outside the Git repository.
 2. Accept the preliminary name review or obtain any desired professional
    trademark review, then reserve the chosen GitHub/package/domain namespaces.
-3. Choose private security and conduct reporting channels, or enable GitHub
-   private vulnerability reporting immediately after the remote is created.
-4. Have someone other than the extractor review the exact commit, file inventory,
+3. Have someone other than the extractor review the exact commit, file inventory,
    provenance record, and unpacked wheel/source archive.
-5. Create the new repository without changing the private upstream. Configure
-   required reviews/checks, secret scanning and push protection, CodeQL,
-   dependency alerts, private vulnerability reporting, and branch protection.
-6. Generate the final SBOM, checksums, changelog entry, and signed release from
+4. Configure branch rules and required checks appropriate for an owner-maintained
+   alpha without preventing emergency maintenance.
+5. Generate the final SBOM, checksums, changelog entry, and signed release from
    the approved commit; scan the downloaded release artifacts once more.
 
 ## Not release blockers for focused v1
