@@ -1,6 +1,6 @@
 # Source and asset provenance
 
-This inventory applies to the pre-publication working tree. It must be reviewed
+This inventory applies to the alpha candidate working tree. It must be reviewed
 again for the exact release commit and built artifacts.
 
 | Paths | Origin | Redistribution status |

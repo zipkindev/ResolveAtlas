@@ -1,7 +1,8 @@
 # Contributing
 
-ResolveAtlas is not yet accepting public contributions. The workflow below will
-apply once the repository passes publication review.
+ResolveAtlas is an owner-maintained alpha and is not yet accepting unsolicited
+implementation pull requests. Issues and focused proposals are welcome once the
+repository is public; coordinate with the maintainer before preparing a change.
 
 ## Contribution requirements
 
@@ -14,5 +15,5 @@ apply once the repository passes publication review.
 - Run formatting, tests, security checks, and the public-content gate.
 
 Contributions are submitted under Apache-2.0 as described by section 5 of the
-license unless explicitly marked otherwise. Public contributions will open only
-after the repository completes its publication review.
+license unless explicitly marked otherwise. Broader contribution workflows will
+open after alpha governance and review responsibilities are documented.

@@ -61,7 +61,7 @@ that adapter or a private network.
 
 ## Implemented vertical slice
 
-The pre-publication candidate includes immutable evidence models, deterministic
+The alpha candidate includes immutable evidence models, deterministic
 fingerprints, explainable correlation scoring, connector/provider protocols,
 an exact-host outbound policy, strict TOML configuration, explicit provider
 routing, a synthetic read-only connector, and a deterministic offline provider.
